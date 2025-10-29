@@ -98,7 +98,7 @@ export const Hero: React.FC = () => {
         <img
           src="/VibeX dashbord image.jpeg"
           alt="AI Development Dashboard"
-          className="mx-auto rounded-2xl object-cover h-full object-left-top"
+          className="mx-auto rounded-2xl object-cover h-full object-[58%_38%] sm:object-left-top md:object-left-top"
           draggable={false}
         />
       </ContainerScroll>
