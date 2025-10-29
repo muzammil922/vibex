@@ -45,7 +45,7 @@ const services = [
 
 export const Services: React.FC = () => {
   return (
-    <section className="pt-5 pb-20 pb-0">
+    <section className="pt-5 pb-10 sm:pb-16 md:pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,15 +54,15 @@ export const Services: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 px-4">
             Enterprise-Grade <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">Solutions</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto px-4">
             Delivering cutting-edge technology solutions that drive business growth, operational efficiency, and competitive advantage in today's digital landscape.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <LuxuryCard
               key={service.title}

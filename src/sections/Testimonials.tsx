@@ -69,7 +69,7 @@ const TESTIMONIALS = [
 
 export const Testimonials: React.FC = () => {
   return (
-    <section className="px-8 py-20">
+    <section className="px-4 sm:px-6 md:px-8 py-16 sm:py-20">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           className="text-center mb-16"
@@ -78,15 +78,15 @@ export const Testimonials: React.FC = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 px-4">
             What Our <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">Clients Say</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
             Don't just take our word for it. Here's what our satisfied clients have to say about our AI-powered development solutions.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {TESTIMONIALS.map((testimonial, index) => (
             <LuxuryTestimonial
               key={testimonial.id}

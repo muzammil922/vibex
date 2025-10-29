@@ -21,7 +21,7 @@ export const StickyContact: React.FC = () => {
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.8, y: 20 }}
       transition={{ duration: 0.3 }}
-      className="fixed bottom-6 right-6 z-[9999]"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999]"
     >
       <div className="flex flex-col gap-3">
         {/* Expandable Contact Options */}
@@ -41,8 +41,8 @@ export const StickyContact: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="w-14 h-14 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm flex items-center justify-center group-hover:shadow-lg group-hover:shadow-orange-500/25 transition-all duration-300">
-                  <WhatsAppIcon className="w-6 h-6 text-orange-400 group-hover:scale-110 transition-transform duration-300" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm flex items-center justify-center group-hover:shadow-lg group-hover:shadow-orange-500/25 transition-all duration-300">
+                  <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 text-orange-400 group-hover:scale-110 transition-transform duration-300" />
                 </div>
               </motion.a>
 
@@ -59,8 +59,8 @@ export const StickyContact: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="w-14 h-14 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm flex items-center justify-center group-hover:shadow-lg group-hover:shadow-orange-500/25 transition-all duration-300">
-                  <Mail className="w-6 h-6 text-orange-400 group-hover:scale-110 transition-transform duration-300" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm flex items-center justify-center group-hover:shadow-lg group-hover:shadow-orange-500/25 transition-all duration-300">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-orange-400 group-hover:scale-110 transition-transform duration-300" />
                 </div>
               </motion.a>
             </>
@@ -74,15 +74,15 @@ export const StickyContact: React.FC = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <div className={`w-14 h-14 rounded-full backdrop-blur-sm flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl ${
+          <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full backdrop-blur-sm flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl ${
             isExpanded 
               ? 'bg-gray-800/80 border border-gray-600/50 group-hover:bg-gray-700/80' 
               : 'bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 group-hover:shadow-orange-500/25'
           }`}>
             {isExpanded ? (
-              <X className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors duration-300" />
+              <X className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400 group-hover:text-white transition-colors duration-300" />
             ) : (
-              <Phone className="w-6 h-6 text-orange-400 group-hover:scale-110 transition-transform duration-300" />
+              <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-orange-400 group-hover:scale-110 transition-transform duration-300" />
             )}
           </div>
         </motion.button>

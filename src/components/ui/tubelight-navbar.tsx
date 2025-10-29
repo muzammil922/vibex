@@ -29,7 +29,7 @@ export function NavBar({ items, className }: NavBarProps) {
   return (
     <div
       className={cn(
-        "fixed top-6 left-1/2 -translate-x-1/2 z-[9999]",
+        "fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-[9999]",
         className,
       )}
     >

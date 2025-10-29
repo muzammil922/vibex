@@ -65,6 +65,16 @@ export default function RadialOrbitalTimeline({
   const orbitRef = useRef<HTMLDivElement>(null);
   const nodeRefs = useRef<Record<number, HTMLDivElement | null>>({});
 
+  // Responsive helpers for mobile sizing
+  const [isSmall, setIsSmall] = useState<boolean>(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 640px)');
+    const onChange = () => setIsSmall(mq.matches);
+    onChange();
+    mq.addEventListener?.('change', onChange);
+    return () => mq.removeEventListener?.('change', onChange);
+  }, []);
+
   const handleContainerClick = (e: React.MouseEvent<HTMLDivElement>) => {
     // Only close if clicking on the container itself, not on nodes
     if (e.target === containerRef.current || e.target === orbitRef.current) {
@@ -139,7 +149,7 @@ export default function RadialOrbitalTimeline({
 
   const calculateNodePosition = (index: number, total: number) => {
     const angle = ((index / total) * 360 + rotationAngle) % 360;
-    const radius = 200;
+    const radius = isSmall ? 140 : 200;
     const radian = (angle * Math.PI) / 180;
 
     const x = radius * Math.cos(radian) + centerOffset.x;
@@ -180,7 +190,7 @@ export default function RadialOrbitalTimeline({
 
   return (
     <div
-      className="w-full h-[80vh] flex flex-col items-center justify-center bg-transparent overflow-visible"
+      className="w-full h-[70vh] sm:h-[75vh] md:h-[80vh] flex flex-col items-center justify-center bg-transparent overflow-visible"
       ref={containerRef}
       onClick={handleContainerClick}
     >
@@ -193,16 +203,16 @@ export default function RadialOrbitalTimeline({
             transform: `translate(${centerOffset.x}px, ${centerOffset.y}px)`,
           }}
         >
-          <div className="absolute w-16 h-16 rounded-full animate-pulse flex items-center justify-center z-10 bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm">
-            <div className="absolute w-20 h-20 rounded-full border border-orange-500/20 animate-ping opacity-70"></div>
+          <div className={`absolute rounded-full animate-pulse flex items-center justify-center z-10 bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm ${isSmall ? 'w-12 h-12' : 'w-16 h-16'}`}>
+            <div className={`absolute rounded-full border border-orange-500/20 animate-ping opacity-70 ${isSmall ? 'w-16 h-16' : 'w-20 h-20'}`}></div>
             <div
-              className="absolute w-24 h-24 rounded-full border border-orange-500/10 animate-ping opacity-50"
+              className={`absolute rounded-full border border-orange-500/10 animate-ping opacity-50 ${isSmall ? 'w-20 h-20' : 'w-24 h-24'}`}
               style={{ animationDelay: "0.5s" }}
             ></div>
-            <div className="w-8 h-8 rounded-full bg-white/80 backdrop-blur-md"></div>
+            <div className={`${isSmall ? 'w-6 h-6' : 'w-8 h-8'} rounded-full bg-white/80 backdrop-blur-md`}></div>
           </div>
 
-          <div className="absolute w-[400px] h-[400px] rounded-full border border-white/10"></div>
+          <div className={`absolute rounded-full border border-white/10 ${isSmall ? 'w-[300px] h-[300px]' : 'w-[400px] h-[400px]'}`}></div>
 
           {timelineData.map((item, index) => {
             const position = calculateNodePosition(index, timelineData.length);
@@ -240,16 +250,16 @@ export default function RadialOrbitalTimeline({
                   }`}
                   style={{
                     background: `radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%)`,
-                    width: `${item.energy * 0.5 + 40}px`,
-                    height: `${item.energy * 0.5 + 40}px`,
-                    left: `-${(item.energy * 0.5 + 40 - 40) / 2}px`,
-                    top: `-${(item.energy * 0.5 + 40 - 40) / 2}px`,
+                    width: `${item.energy * 0.4 + (isSmall ? 28 : 40)}px`,
+                    height: `${item.energy * 0.4 + (isSmall ? 28 : 40)}px`,
+                    left: `-${(item.energy * 0.4 + (isSmall ? 28 : 40) - (isSmall ? 32 : 40)) / 2}px`,
+                    top: `-${(item.energy * 0.4 + (isSmall ? 28 : 40) - (isSmall ? 32 : 40)) / 2}px`,
                   }}
                 ></div>
 
                       <div
                         className={`
-                          w-16 h-16 rounded-full flex items-center justify-center cursor-pointer hover:scale-110
+                          ${isSmall ? 'w-12 h-12' : 'w-16 h-16'} rounded-full flex items-center justify-center cursor-pointer hover:scale-110
                           bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm
                           ${
                             isExpanded
@@ -259,15 +269,15 @@ export default function RadialOrbitalTimeline({
                               : "hover:border-orange-400/60"
                           }
                           transition-all duration-300 transform
-                          ${isExpanded ? "scale-150" : ""}
+                          ${isExpanded ? (isSmall ? 'scale-125' : 'scale-150') : ''}
                         `}
                       >
-                        <Icon size={20} />
+                        <Icon size={isSmall ? 16 : 20} />
                       </div>
 
                 <div
                   className={`
-                  absolute top-14 left-1/2 -translate-x-1/2 text-center
+                  absolute ${isSmall ? 'top-12' : 'top-14'} left-1/2 -translate-x-1/2 text-center
                   text-xs font-medium leading-tight
                   transition-all duration-300
                   ${isExpanded ? "text-white scale-125 max-w-40" : "text-white/90 max-w-32"}

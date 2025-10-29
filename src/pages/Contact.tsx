@@ -165,13 +165,13 @@ ${formData.name}`;
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 px-4">
               Get In <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Touch</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
               Ready to start your next project? We're here to help you bring your ideas to life with our expert development services.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-400 px-4">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-orange-400" />
                 <span>Free Consultation</span>
@@ -199,15 +199,15 @@ ${formData.name}`;
             viewport={{ once: false, amount: 0.3 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-4">
               Choose Your <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Preferred</span> Method
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
               Multiple ways to reach us - pick what works best for you
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={index}
@@ -217,14 +217,14 @@ ${formData.name}`;
                 viewport={{ once: false, amount: 0.3 }}
                 whileHover={{ y: -5 }}
                 onClick={info.action}
-                className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 text-center cursor-pointer hover:border-orange-500/50 transition-all duration-300 group"
+                className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 sm:p-8 text-center cursor-pointer hover:border-orange-500/50 transition-all duration-300 group"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm group-hover:shadow-lg group-hover:shadow-orange-500/25 transition-all duration-300">
-                  <info.icon className="w-8 h-8 text-orange-400" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 backdrop-blur-sm group-hover:shadow-lg group-hover:shadow-orange-500/25 transition-all duration-300">
+                  <info.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-orange-400" />
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-white">{info.title}</h3>
-                <p className="text-orange-400 font-medium mb-2">{info.details}</p>
-                <p className="text-gray-400 text-sm">{info.description}</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 text-white">{info.title}</h3>
+                <p className="text-orange-400 font-medium mb-2 text-sm sm:text-base">{info.details}</p>
+                <p className="text-gray-400 text-xs sm:text-sm">{info.description}</p>
               </motion.div>
             ))}
           </div>

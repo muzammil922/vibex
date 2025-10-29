@@ -104,7 +104,7 @@ const timelineData = [
 
 export const Showcase: React.FC = () => {
   return (
-    <section className="py-5 overflow-visible relative z-10 pt-0">
+    <section className="py-5 sm:py-8 md:py-10 overflow-visible relative z-10 pt-0">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -113,10 +113,10 @@ export const Showcase: React.FC = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight px-4">
             Enterprise <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">Portfolio</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
             Discover our track record of delivering high-impact solutions for Fortune 50 companies and innovative startups across various industries
           </p>
         </motion.div>

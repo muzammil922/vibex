@@ -28,14 +28,14 @@ export const ContactCTA: React.FC = () => {
             <span className="text-sm font-semibold text-orange-300 tracking-wide">ENTERPRISE SOLUTIONS</span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 px-4">
             Ready to Scale Your{" "}
             <span style={{color: 'rgb(249, 115, 22)'}}>
               Enterprise?
             </span>
           </h2>
           
-          <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed px-4">
             Partner with us to build cutting-edge solutions that drive measurable business growth. 
             Our enterprise-grade development team delivers results that exceed expectations and transform your competitive advantage.
           </p>
@@ -52,37 +52,37 @@ export const ContactCTA: React.FC = () => {
           >
             {/* Removed heading and subtitle as requested */}
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-6xl mx-auto px-4">
               <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Shield size={24} className="text-orange-400" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Shield size={20} className="sm:w-6 sm:h-6 md:w-6 md:h-6 text-orange-400" />
                 </div>
-                <h4 className="text-lg font-semibold text-white mb-2">Enterprise Security</h4>
-                <p className="text-sm text-gray-400">Bank-level encryption and compliance standards</p>
+                <h4 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">Enterprise Security</h4>
+                <p className="text-xs sm:text-sm text-gray-400">Bank-level encryption and compliance standards</p>
               </div>
               
               <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Zap size={24} className="text-orange-400" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Zap size={20} className="sm:w-6 sm:h-6 md:w-6 md:h-6 text-orange-400" />
                 </div>
-                <h4 className="text-lg font-semibold text-white mb-2">Rapid Deployment</h4>
-                <p className="text-sm text-gray-400">Faster time-to-market with agile methodologies</p>
+                <h4 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">Rapid Deployment</h4>
+                <p className="text-xs sm:text-sm text-gray-400">Faster time-to-market with agile methodologies</p>
               </div>
               
               <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Star size={24} className="text-orange-400" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Star size={20} className="sm:w-6 sm:h-6 md:w-6 md:h-6 text-orange-400" />
                 </div>
-                <h4 className="text-lg font-semibold text-white mb-2">Proven Track Record</h4>
-                <p className="text-sm text-gray-400">50+ successful projects across industries</p>
+                <h4 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">Proven Track Record</h4>
+                <p className="text-xs sm:text-sm text-gray-400">50+ successful projects across industries</p>
               </div>
               
               <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Award size={24} className="text-orange-400" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Award size={20} className="sm:w-6 sm:h-6 md:w-6 md:h-6 text-orange-400" />
                 </div>
-                <h4 className="text-lg font-semibold text-white mb-2">Industry Recognition</h4>
-                <p className="text-sm text-gray-400">Award-winning solutions and certifications</p>
+                <h4 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">Industry Recognition</h4>
+                <p className="text-xs sm:text-sm text-gray-400">Award-winning solutions and certifications</p>
               </div>
             </div>
           </motion.div>

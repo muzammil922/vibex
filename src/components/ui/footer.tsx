@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-gradient-to-b from-black via-gray-900 to-black border-t border-orange-500/20 relative z-20 min-h-[400px]">
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <motion.div
@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
                   className="h-12 w-auto"
                 />
               </div>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                 Transforming businesses with cutting-edge AI-powered development solutions. 
                 We build enterprise-grade applications that drive growth and efficiency.
               </p>
@@ -87,7 +87,7 @@ export const Footer: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-lg font-semibold text-white mb-6">Services</h4>
+              <h4 className="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Services</h4>
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
@@ -112,7 +112,7 @@ export const Footer: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-lg font-semibold text-white mb-6">Resources</h4>
+              <h4 className="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Resources</h4>
               <ul className="space-y-3">
                 {resources.map((resource, index) => (
                   <li key={index}>
@@ -137,7 +137,7 @@ export const Footer: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-lg font-semibold text-white mb-6">Contact</h4>
+              <h4 className="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Contact</h4>
               <ul className="space-y-4">
                 {contact.map((item, index) => (
                   <li key={index}>
@@ -164,10 +164,10 @@ export const Footer: React.FC = () => {
           className="pt-8 border-t border-gray-800/50"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-300 text-xs sm:text-sm text-center md:text-left">
               © 2025 VibeX. All rights reserved. Built with ❤️ for enterprise excellence.
             </p>
-            <div className="flex gap-6 text-sm">
+            <div className="flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm justify-center md:justify-end">
               <a href="#" className="text-gray-300 hover:text-orange-400 transition-colors duration-300">
                 Privacy Policy
               </a>

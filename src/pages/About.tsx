@@ -86,16 +86,16 @@ const About: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 px-4">
               About <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">VibeX</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
               We are a global team of AI-powered development experts, dedicated to transforming businesses through innovative technology solutions.
             </p>
           </motion.div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20 px-4">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -104,13 +104,13 @@ const About: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
               >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-8 h-8 text-orange-400" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <stat.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-orange-400" />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2" style={{color: 'rgb(249, 115, 22)'}}>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2" style={{color: 'rgb(249, 115, 22)'}}>
                   {stat.number}
                 </div>
-                <div className="text-gray-400 font-medium">{stat.label}</div>
+                <div className="text-gray-400 font-medium text-sm sm:text-base">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -127,26 +127,26 @@ const About: React.FC = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 px-4">
               Our <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">Story</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
               Founded in 2020, VibeX emerged from a simple yet powerful vision: to democratize AI technology and make it accessible to businesses of all sizes. What started as a small team of passionate developers has grown into a global force, delivering transformative solutions across industries.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center px-4">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: false, amount: 0.3 }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">From Vision to Reality</h3>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6">From Vision to Reality</h3>
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                 Our journey began when our founders recognized the gap between cutting-edge AI research and practical business applications. We set out to bridge this gap, creating solutions that are not just technologically advanced, but also practical and scalable.
               </p>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
                 Today, we're proud to have helped over 50 companies worldwide transform their operations, increase efficiency, and unlock new growth opportunities through our AI-powered development solutions.
               </p>
             </motion.div>
