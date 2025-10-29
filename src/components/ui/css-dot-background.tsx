@@ -29,19 +29,17 @@ export const CSSDotBackground = () => {
       ref={containerRef}
       className="fixed inset-0 z-0 overflow-hidden"
       style={{
-        '--mouse-x': '50%',
-        '--mouse-y': '50%',
         background: isDark ? '#121212' : '#F4F5F5',
-                backgroundImage: `
+        backgroundImage: `
                   radial-gradient(circle at 20% 20%, ${isDark ? 'rgba(255,255,255,0.01)' : 'rgba(0,0,0,0.01)'} 1px, transparent 1px),
                   radial-gradient(circle at 80% 80%, ${isDark ? 'rgba(255,255,255,0.008)' : 'rgba(0,0,0,0.008)'} 1px, transparent 1px),
                   radial-gradient(circle at 40% 40%, ${isDark ? 'rgba(255,255,255,0.005)' : 'rgba(0,0,0,0.005)'} 1px, transparent 1px),
-                  radial-gradient(circle at var(--mouse-x) var(--mouse-y), ${isDark ? 'rgba(255,255,255,0.015)' : 'rgba(0,0,0,0.015)'} 2px, transparent 2px)
+                  radial-gradient(circle at 50% 50%, ${isDark ? 'rgba(255,255,255,0.015)' : 'rgba(0,0,0,0.015)'} 2px, transparent 2px)
                 `,
         backgroundSize: '60px 60px, 100px 100px, 40px 40px, 200px 200px',
         backgroundPosition: '0 0, 30px 30px, 15px 15px, 0 0',
         transition: 'background-position 0.1s ease-out'
-      }}
+      } as React.CSSProperties}
     >
       {/* Animated floating dots */}
       <div className="absolute inset-0">
@@ -61,7 +59,7 @@ export const CSSDotBackground = () => {
         ))}
       </div>
       
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% { 
             transform: translateY(0px) scale(1);

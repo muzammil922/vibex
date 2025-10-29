@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { BarChart3, Cloud, Workflow, Globe, Building2, Handshake } from "lucide-react";
 import { LuxuryCard } from "../components/ui/luxury-card";
-import { cn } from "../lib/utils";
+// import { cn } from "../lib/utils";
 
 const services = [
   {

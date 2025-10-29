@@ -2,9 +2,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Target, Award, Zap, Shield, Globe, Code, Lightbulb } from 'lucide-react';
 import { CSSDotBackground } from '../components/ui/css-dot-background';
+import { useSEO } from '../hooks/useSEO';
 
 const About: React.FC = () => {
   console.log('About page is rendering');
+  
+  // SEO optimization
+  useSEO({
+    title: 'About VibeX - AI-Powered Development Team | Enterprise Software Experts',
+    description: 'Meet the VibeX team of AI-powered development experts. Learn about our mission, values, and the experienced professionals behind our enterprise software solutions.',
+    keywords: 'VibeX team, AI development team, enterprise software experts, software development company, AI-powered solutions team, custom software development team',
+    url: 'https://vibex.pro/about',
+    image: 'https://vibex.pro/VibeX%20dashbord%20image.jpeg'
+  });
   
   const stats = [
     { number: '50+', label: 'Projects Delivered', icon: Code },

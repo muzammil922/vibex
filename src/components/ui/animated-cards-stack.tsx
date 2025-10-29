@@ -156,7 +156,7 @@ export const CardTransformed = React.forwardRef<
         ref={ref}
         style={cardStyle}
         className={cn(cardVariants({ variant, className }))}
-        {...props}
+        {...(props as any)}
       />
     )
   }

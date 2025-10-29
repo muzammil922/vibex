@@ -9,16 +9,14 @@ import {
   Zap, 
   Users, 
   CheckCircle, 
-  ArrowRight,
   Star,
   Clock,
   Award,
-  Headphones,
-  MessageCircle,
   Mail,
   BarChart3
 } from 'lucide-react';
 import { CSSDotBackground } from '../components/ui/css-dot-background';
+import { useSEO } from '../hooks/useSEO';
 
 // WhatsApp Icon Component
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -28,6 +26,14 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 );
 
 const ServicesPage: React.FC = () => {
+  // SEO optimization
+  useSEO({
+    title: 'VibeX Services - AI-Powered Development Solutions | Custom Software Development',
+    description: 'Discover VibeX comprehensive AI-powered development services including custom software development, enterprise dashboards, SaaS platforms, and mobile applications. Trusted by 50+ companies.',
+    keywords: 'AI development services, custom software development, enterprise software solutions, SaaS platform development, mobile app development, web development services, AI-powered applications',
+    url: 'https://vibex.pro/services',
+    image: 'https://vibex.pro/VibeX%20dashbord%20image.jpeg'
+  });
   const services = [
     {
       icon: Code,
@@ -129,16 +135,16 @@ const ServicesPage: React.FC = () => {
     }
   ];
 
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi! I'm interested in your services. Can you help me with a project?");
-    window.open(`https://wa.me/923113840943?text=${message}`, '_blank');
-  };
+  // const handleWhatsAppClick = () => {
+  //   const message = encodeURIComponent("Hi! I'm interested in your services. Can you help me with a project?");
+  //   window.open(`https://wa.me/923113840943?text=${message}`, '_blank');
+  // };
 
-  const handleEmailClick = () => {
-    const subject = encodeURIComponent("Service Inquiry - VibeX Solutions");
-    const body = encodeURIComponent("Hello VibeX Team,\n\nI'm interested in your services and would like to discuss a potential project.\n\nPlease contact me at your earliest convenience.\n\nBest regards,");
-    window.open(`mailto:vibexsolution@gmail.com?subject=${subject}&body=${body}`, '_blank');
-  };
+  // const handleEmailClick = () => {
+  //   const subject = encodeURIComponent("Service Inquiry - VibeX Solutions");
+  //   const body = encodeURIComponent("Hello VibeX Team,\n\nI'm interested in your services and would like to discuss a potential project.\n\nPlease contact me at your earliest convenience.\n\nBest regards,");
+  //   window.open(`mailto:vibexsolution@gmail.com?subject=${subject}&body=${body}`, '_blank');
+  // };
 
   return (
     <div className="min-h-screen pt-20 relative">

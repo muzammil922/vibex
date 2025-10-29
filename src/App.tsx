@@ -1,15 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { Hero } from "./sections/Hero";
-import { Services } from "./sections/Services";
-import { Showcase } from "./sections/Showcase";
-import { Testimonials } from "./sections/Testimonials";
-import { ContactCTA } from "./sections/ContactCTA";
 import { CSSDotBackground } from "./components/ui/css-dot-background";
 import { ThemeProvider } from "./components/ui/theme-provider";
 import { NavBar } from "./components/ui/tubelight-navbar";
 import { StickyContact } from "./components/ui/sticky-contact";
 import { Footer } from "./components/ui/footer";
+import HomePage from "./pages/HomePage";
 import About from "./pages/About";
 import ServicesPage from "./pages/Services";
 import Contact from "./pages/Contact";
@@ -59,15 +55,7 @@ function App() {
           
           <div className="flex-1">
             <Routes>
-                  <Route path="/" element={
-                    <main className="relative z-10 pt-20">
-                      <Hero />
-                      <Services />
-                      <Showcase />
-                      <Testimonials />
-                      <ContactCTA />
-                    </main>
-                  } />
+                  <Route path="/" element={<HomePage />} />
           
           {/* About Page */}
           <Route path="/about" element={

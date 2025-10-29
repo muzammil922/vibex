@@ -338,10 +338,10 @@ export default function RadialOrbitalTimeline({
                             </div>
                             <div className="flex justify-center">
                               {item.relatedIds.slice(0, 1).map((relatedId) => {
-                                const relatedItem = timelineData.find(
-                                  (i) => i.id === relatedId
-                                );
-                                const linkUrl = item.relatedLinks[relatedId];
+                                // const relatedItem = timelineData.find(
+                                //   (i) => i.id === relatedId
+                                // );
+                                // const linkUrl = item.relatedLinks[relatedId];
                                 
                                 return (
                                   <StarBorder

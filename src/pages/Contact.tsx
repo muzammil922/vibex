@@ -7,13 +7,12 @@ import {
   Clock, 
   MessageCircle, 
   CheckCircle,
-  Globe,
-  Users,
   Headphones,
   Building2,
   Star
 } from 'lucide-react';
 import { CSSDotBackground } from '../components/ui/css-dot-background';
+import { useSEO } from '../hooks/useSEO';
 
 // WhatsApp Icon Component
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -23,6 +22,15 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 );
 
 const Contact: React.FC = () => {
+  // SEO optimization
+  useSEO({
+    title: 'Contact VibeX - Get AI-Powered Development Solutions | Enterprise Software Experts',
+    description: 'Contact VibeX for AI-powered development solutions. Get in touch with our enterprise software experts for custom development, SaaS platforms, and digital transformation services.',
+    keywords: 'contact VibeX, AI development contact, enterprise software consultation, custom development inquiry, software development contact, VibeX support',
+    url: 'https://vibex.pro/contact',
+    image: 'https://vibex.pro/VibeX%20dashbord%20image.jpeg'
+  });
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,7 +41,7 @@ const Contact: React.FC = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Mail, X, Phone } from 'lucide-react';
+import { Mail, X, Phone } from 'lucide-react';
 
 // WhatsApp Icon Component
 const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) => (
@@ -10,7 +10,7 @@ const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" 
 );
 
 export const StickyContact: React.FC = () => {
-  const [isVisible, setIsVisible] = React.useState(true);
+  const [isVisible] = React.useState(true);
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   if (!isVisible) return null;

@@ -1,0 +1,20 @@
+{
+  "name": "VibeX - AI-Powered Development Solutions",
+  "short_name": "VibeX",
+  "description": "Transform your business with cutting-edge AI-powered applications, enterprise dashboards, and scalable SaaS platforms.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#f97316",
+  "background_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "productivity", "developer"]
+}
