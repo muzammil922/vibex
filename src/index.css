@@ -210,10 +210,16 @@ body {
 /* Ensure navbar and sticky contact stay in place */
 .navbar-fixed {
   position: fixed;
-  top: 0;
+  top: 2rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .navbar-fixed {
+    top: 2.5rem;
+  }
 }
 
 .sticky-contact-fixed {

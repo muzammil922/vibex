@@ -29,7 +29,7 @@ export function NavBar({ items, className }: NavBarProps) {
   return (
     <div
       className={cn(
-        "navbar-fixed top-4 md:top-6",
+        "navbar-fixed top-8 md:top-10",
         className,
       )}
     >
