@@ -43,7 +43,7 @@ function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vibex-theme">
       <Router basename={import.meta.env.BASE_URL}>
-        <div className="min-h-screen text-white relative flex flex-col">
+        <div className="min-h-screen text-white relative flex flex-col w-full overflow-x-hidden">
           {/* CSS Dot Background */}
           <CSSDotBackground />
           

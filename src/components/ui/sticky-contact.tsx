@@ -17,11 +17,11 @@ export const StickyContact: React.FC = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.8, y: 20 }}
+      initial={{ opacity: 1, scale: 1, y: 0 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.8, y: 20 }}
-      transition={{ duration: 0.3 }}
-      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999]"
+      exit={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ duration: 0 }}
+      className="sticky-contact-fixed"
     >
       <div className="flex flex-col gap-3">
         {/* Expandable Contact Options */}

@@ -71,6 +71,9 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* Animation for the pulsing effect */
@@ -197,4 +200,32 @@ body {
 
 .text-white\/80 {
   color: rgba(255, 255, 255, 0.8);
+}
+
+/* Prevent unwanted animations on page load */
+.fixed {
+  position: fixed !important;
+}
+
+/* Ensure navbar and sticky contact stay in place */
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.sticky-contact-fixed {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 9999;
+}
+
+@media (min-width: 640px) {
+  .sticky-contact-fixed {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
 }
