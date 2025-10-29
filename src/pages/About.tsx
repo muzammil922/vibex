@@ -50,25 +50,25 @@ const About: React.FC = () => {
     {
       name: 'Muzammil',
       role: 'Founder',
-      image: 'public/Muzammil Founder.png',
+      image: '/Muzammil%20Founder.png',
       description: '15+ years in enterprise software development'
     },
     {
       name: 'Kainat',
       role: 'Co-Founder',
-      image: 'public/kainat Co-Fonder.png',
+      image: '/kainat%20Co-Fonder.png',
       description: 'AI/ML expert with Fortune 500 experience'
     },
     {
       name: 'Muzammil',
       role: 'Lead Developer',
-      image: 'public/Muzammil Founder.png',
+      image: '/Muzammil%20Founder.png',
       description: 'Full-stack specialist and architecture expert'
     },
     {
       name: 'Kainat',
       role: 'Design Director',
-      image: 'public/kainat Co-Fonder.png',
+      image: '/kainat%20Co-Fonder.png',
       description: 'UX/UI designer with award-winning portfolio'
     }
   ];
